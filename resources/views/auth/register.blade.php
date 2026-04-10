@@ -96,7 +96,7 @@
                     <option value="BSIT" {{ old('course') == 'BSIT' ? 'selected' : '' }}>BS Information Technology</option>
                     <option value="ABEL" {{ old('course') == 'ABEL' ? 'selected' : '' }}>BA English Language</option>
                     <option value="BSED" {{ old('course') == 'BSED' ? 'selected' : '' }}>BS Secondary Education</option>
-                    <option value="BSMATH" {{ old('course') == 'BSBA' ? 'selected' : '' }}>BS Business Administration</option>
+                    <option value="BSMATH" {{ old('course') == 'BSMATH' ? 'selected' : '' }}>BS Mathematics</option>
                     <option value="BSME" {{ old('course') == 'BSME' ? 'selected' : '' }}>BS Mechanical Engineering</option>
                     <option value="BSCE" {{ old('course') == 'BSCE' ? 'selected' : '' }}>BS Civil Engineering</option>
                     <option value="BSEE" {{ old('course') == 'BSEE' ? 'selected' : '' }}>BS Electrical Engineering</option>
