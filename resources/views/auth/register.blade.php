@@ -84,6 +84,7 @@
                         <option value="2" {{ old('year_level') == '2' ? 'selected' : '' }}>2nd Year</option>
                         <option value="3" {{ old('year_level') == '3' ? 'selected' : '' }}>3rd Year</option>
                         <option value="4" {{ old('year_level') == '4' ? 'selected' : '' }}>4th Year</option>
+                        <option value="5" {{ old('year_level') == '5' ? 'selected' : '' }}>5th Year</option>
                     </select>
                 </div>
             </div>
@@ -95,7 +96,7 @@
                     <option value="BSIT" {{ old('course') == 'BSIT' ? 'selected' : '' }}>BS Information Technology</option>
                     <option value="ABEL" {{ old('course') == 'ABEL' ? 'selected' : '' }}>BA English Language</option>
                     <option value="BSED" {{ old('course') == 'BSED' ? 'selected' : '' }}>BS Secondary Education</option>
-                    <option value="BSBA" {{ old('course') == 'BSBA' ? 'selected' : '' }}>BS Business Administration</option>
+                    <option value="BSMATH" {{ old('course') == 'BSBA' ? 'selected' : '' }}>BS Business Administration</option>
                     <option value="BSME" {{ old('course') == 'BSME' ? 'selected' : '' }}>BS Mechanical Engineering</option>
                     <option value="BSCE" {{ old('course') == 'BSCE' ? 'selected' : '' }}>BS Civil Engineering</option>
                     <option value="BSEE" {{ old('course') == 'BSEE' ? 'selected' : '' }}>BS Electrical Engineering</option>

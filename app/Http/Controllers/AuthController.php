@@ -56,7 +56,7 @@ class AuthController extends Controller
             'contact_number'    => 'required|digits_between:7,15',
             'address'           => 'required|min:5',
             'course'            => 'required',
-            'year_level'        => 'required|in:1,2,3,4',
+            'year_level'        => 'required|in:1,2,3,4,5',
             'student_id_number' => 'required|unique:students,student_id_number',
         ]);
 

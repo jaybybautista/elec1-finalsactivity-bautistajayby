@@ -5,7 +5,6 @@
 @section('content')
 <div class="container">
 
-    {{-- Welcome Banner --}}
     <div style="background:#1a3a5c;color:white;border-radius:8px;padding:24px 32px;margin-bottom:24px;display:flex;justify-content:space-between;align-items:center;">
         <div>
             <div style="font-size:20px;font-weight:700;">Welcome, {{ session('first_name') }} {{ session('last_name') }}!</div>
@@ -17,7 +16,6 @@
         </div>
     </div>
 
-    {{-- Student Info Card --}}
     <div class="card" style="margin-bottom:24px;">
         <div class="card-title">Student Information</div>
         <div class="info-grid">
@@ -56,7 +54,6 @@
         </div>
     </div>
 
-    {{-- Recent Activity Logs --}}
     <div class="card">
         <div class="card-title">Recent Activity</div>
         @if($logs->isEmpty())

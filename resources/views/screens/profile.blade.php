@@ -12,12 +12,10 @@
     <div class="card">
         <div class="card-title">Update Profile Settings</div>
 
-        {{-- Success message --}}
         @if(session('success'))
             <div class="alert alert-success">✓ {{ session('success') }}</div>
         @endif
 
-        {{-- Validation errors --}}
         @if($errors->any())
             <div class="alert alert-error">
                 @foreach($errors->all() as $error)
@@ -29,7 +27,6 @@
         <form action="{{ route('profile.update', $user->id) }}" method="POST">
             @csrf
 
-            {{-- Personal Information --}}
             <p style="font-size:12px;font-weight:700;color:#718096;letter-spacing:1px;margin-bottom:12px;">PERSONAL INFORMATION</p>
 
             <div class="form-row">
@@ -74,14 +71,13 @@
                 <input type="text" name="address" value="{{ old('address', $user->address) }}" required>
             </div>
 
-            {{-- Academic Information --}}
             <p style="font-size:12px;font-weight:700;color:#718096;letter-spacing:1px;margin:20px 0 12px;">ACADEMIC INFORMATION</p>
 
             <div class="form-row">
                 <div class="form-group">
                     <label>Course / Program *</label>
                     <select name="course" required>
-                        @foreach(['BSIT','BSCS','BSED','BSBA','BSN','BSCE','BSEE','Other'] as $c)
+                        @foreach(['BSIT','ABEL','BSED','BSMATH','BSME','BSCE','BSEE','Other'] as $c)
                             <option value="{{ $c }}" {{ old('course', $user->course)==$c ? 'selected':'' }}>{{ $c }}</option>
                         @endforeach
                     </select>
@@ -89,14 +85,13 @@
                 <div class="form-group">
                     <label>Year Level *</label>
                     <select name="year_level" required>
-                        @foreach(['1'=>'1st Year','2'=>'2nd Year','3'=>'3rd Year','4'=>'4th Year'] as $val=>$label)
+                        @foreach(['1'=>'1st Year','2'=>'2nd Year','3'=>'3rd Year','4'=>'4th Year', '5'=>'5th Year'] as $val=>$label)
                             <option value="{{ $val }}" {{ old('year_level', $user->year_level)==$val ? 'selected':'' }}>{{ $label }}</option>
                         @endforeach
                     </select>
                 </div>
             </div>
 
-            {{-- Account Information --}}
             <p style="font-size:12px;font-weight:700;color:#718096;letter-spacing:1px;margin:20px 0 12px;">ACCOUNT INFORMATION</p>
 
             <div class="form-group">
